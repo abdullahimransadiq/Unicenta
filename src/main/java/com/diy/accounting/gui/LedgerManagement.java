@@ -8,6 +8,8 @@ import com.openbravo.basic.BasicException;
 import com.openbravo.pos.forms.AppLocal;
 import com.openbravo.pos.forms.AppView;
 import com.openbravo.pos.forms.BeanFactory;
+import com.openbravo.pos.forms.BeanFactoryApp;
+import com.openbravo.pos.forms.BeanFactoryException;
 import com.openbravo.pos.forms.JPanelView;
 import javax.swing.JComponent;
 
@@ -15,13 +17,12 @@ import javax.swing.JComponent;
  *
  * @author Ittyab Ur Rehman
  */
-public class LedgerManagement extends javax.swing.JPanel implements JPanelView, BeanFactory {
+public class LedgerManagement extends javax.swing.JPanel implements JPanelView, BeanFactoryApp {
 
     /**
      * Creates new form LedgerManagement
-     * @param appView
      */
-    public LedgerManagement(AppView appView) {
+    public LedgerManagement() {
         initComponents();
     }
 
@@ -74,7 +75,11 @@ public class LedgerManagement extends javax.swing.JPanel implements JPanelView, 
         return this;
     }
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void init(AppView app) throws BeanFactoryException {
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
